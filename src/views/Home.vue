@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld v-bind:msgs="msgs" />
   </div>
 </template>
 
@@ -11,6 +10,9 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
+  props: {
+    msgs: Array
+  },
   components: {
     HelloWorld
   }
